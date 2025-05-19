@@ -1,0 +1,15 @@
+const express = require('express');
+const router = express.Router();
+
+router.get('/api/pedidos', (req, res) => {
+
+  const pedidos = [
+    {id: 1, usuario: 'Juan', total: 12},
+    {id: 2, usuario: 'Miguel', total: 23},
+    {id: 3, usuario: 'Sara', total: 345}
+  ];
+
+  res.json(pedidos);
+});
+
+module.exports = router;
